@@ -1,0 +1,50 @@
+# -------------------------------
+# 3. Real-Time Sensor Input & Prediction
+# -------------------------------
+userUV = float(input("Enter UV (0-100): "))
+userMoisture = float(input("Enter Moisture (0-100): "))
+userOil = float(input("Enter Oil (0-100): "))
+userTemp = float(input("Enter Temperature (0-100): "))
+
+# Normalize the input using the same scaler used in training
+user_input = scaler.transform([[userUV, userMoisture, userOil, userTemp]])
+
+# Predict using the trained model
+pred_prob = model.predict(user_input)
+pred_class_index = np.argmax(pred_prob, axis=1)[0]
+
+# Convert predicted numeric class back to the original label (should be a number in string format, e.g. "35")
+predicted_label = le.inverse_transform([pred_class_index])[0]
+print(f"\n Predicted Class: {predicted_label}")
+
+# -------------------------------
+# 4. JSON Lookup for Additional Recommendations
+# -------------------------------
+# Create combo key using the predicted label
+combo_key = f"Class{predicted_label}"
+
+# Load JSON recommendation file
+json_path = r"C:\Skin care assistant\MATLAB\Classification\Modified_Skin_recommendation1.json"
+with open(json_path, 'r') as f:
+    recommendation_dict = json.load(f)
+
+print("\n Recommendation Results")
+print("-------------------------------")
+if combo_key in recommendation_dict:
+    json_products = recommendation_dict[combo_key]["Products"]
+    json_tips = recommendation_dict[combo_key]["Tips"]
+    
+    print(f" Predicted Class: {predicted_label}")
+    print(" Match found in JSON")
+    print("\n Recommended Products:")
+    for product in json_products:
+        print(f"- {product}")
+    
+    print("\n Skincare Tips:")
+    for tip in json_tips:
+        print(f"- {tip}")
+else:
+    print(f" Predicted Class: {predicted_label}")
+    print(" No matching class in JSON.")
+    print("- Products: Custom Care Required")
+    print("- Tips: Consult a dermatologist")
