@@ -18,22 +18,6 @@ This system integrates capacitive moisture sensing, spectral skin tone/oil analy
 
 ---
 
-## Screenshots
-
-Here is a look at the web application interface.
-
-| Environmental Tips | Skin Analysis |
-| :---: | :---: |
-|  |  |
-| The app displays real-time UV, humidity, and temperature data. | Users get a clear reading of their moisture and oil levels. |
-
-| Recommended Routine |
-| :---: |
-|  |
-| The FNN output is mapped to a JSON file to provide a full morning and night routine. |
-
----
-
 ## Tech Stack & Hardware
 
 ### Hardware Components
