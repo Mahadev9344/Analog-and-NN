@@ -84,11 +84,6 @@ We use a Feedforward Neural Network (FNN) built with TensorFlow/Keras. The archi
 
 The FNN model was trained to classify 81 unique skin conditions based on sensor inputs. The model performs strongly with a **Test Accuracy of 94%**.
 
-| Model Accuracy | Model Loss |
-| :---: | :---: |
-|  |  |
-| Accuracy vs. Epochs | Loss vs. Epochs |
-
 ---
 
 ## Getting Started
