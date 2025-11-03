@@ -8,7 +8,7 @@ This system integrates capacitive moisture sensing, spectral skin tone/oil analy
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 * **Personalized Skin Analysis:** Measures skin moisture and oil levels directly.
 * **Environmental Monitoring:** Actively tracks ambient UV index, temperature, and humidity to provide contextual advice.
@@ -18,7 +18,7 @@ This system integrates capacitive moisture sensing, spectral skin tone/oil analy
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 Here is a look at the web application interface.
 
@@ -34,7 +34,7 @@ Here is a look at the web application interface.
 
 ---
 
-## 🛠️ Tech Stack & Hardware
+## Tech Stack & Hardware
 
 ### Hardware Components
 * **Microcontroller:** ESP32-WROOM-32 (for processing and Wi-Fi)
@@ -53,7 +53,7 @@ Here is a look at the web application interface.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Hardware Architecture
 The system is centered around the ESP32.
@@ -80,7 +80,7 @@ We use a Feedforward Neural Network (FNN) built with TensorFlow/Keras. The archi
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 The FNN model was trained to classify 81 unique skin conditions based on sensor inputs. The model performs strongly with a **Test Accuracy of 94%**.
 
@@ -91,7 +91,7 @@ The FNN model was trained to classify 81 unique skin conditions based on sensor 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Hardware Setup
 Assemble the circuit as shown in the `Analog Report.pdf` (Fig. 1).
@@ -136,7 +136,7 @@ This project uses a Node.js backend and a React/Vite frontend.
 
 ---
 
-## 👥 Authors
+## Authors
 
 * **MR Bharath**
 * **Machavarapu Sriram**
@@ -145,12 +145,12 @@ This project uses a Node.js backend and a React/Vite frontend.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 We would like to express our gratitude to Amrita Vishwa Vidyapeetham for providing the resources and support necessary to complete this project.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
